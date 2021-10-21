@@ -1,14 +1,6 @@
 import { LandingScreen, OnboardingScreens } from './Landing';
 
-import {
-  DashboardScreen,
-  UpdatePlaylistScreen,
-  ProfileScreen,
-  OrganizerScreen,
-  SelectGenresScreen,
-  SelectMoodsScreen,
-  ViewPlaylistScreen,
-} from './Tabs';
+import { DashboardScreen, ProfileScreen, CameraScreen } from './Tabs';
 
 export {
   // User Flow
@@ -16,12 +8,8 @@ export {
   OnboardingScreens,
   // Dashboard
   DashboardScreen,
-  UpdatePlaylistScreen,
   // Profile
   ProfileScreen,
   // Library Organizer
-  OrganizerScreen,
-  SelectGenresScreen,
-  SelectMoodsScreen,
-  ViewPlaylistScreen,
+  CameraScreen,
 };

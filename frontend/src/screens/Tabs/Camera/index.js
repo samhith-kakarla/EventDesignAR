@@ -1,11 +1,3 @@
-import OrganizerScreen from './LibraryOrganizer';
-import SelectGenresScreen from './SelectGenres';
-import SelectMoodsScreen from './SelectMoods';
-import ViewPlaylistScreen from './ViewPlaylist';
+import CameraScreen from './Camera';
 
-export {
-  OrganizerScreen,
-  SelectGenresScreen,
-  SelectMoodsScreen,
-  ViewPlaylistScreen,
-};
+export { CameraScreen };

@@ -3,17 +3,22 @@ import PropTypes from 'prop-types';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { OrganizerScreen } from '../screens';
+import { CameraScreen } from '../screens';
 import { recordScreen } from '../utils';
 
 const Stack = createStackNavigator();
 
 const CameraScreens = ({ navigation }) => {
   return (
-    <Stack.Navigator initialRouteName="Camera">
+    <Stack.Navigator
+      initialRouteName="Camera"
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen
         name="Camera"
-        component={OrganizerScreen}
+        component={CameraScreen}
         listeners={({ route }) => ({
           focus: (e) => {
             recordScreen('Camera');
