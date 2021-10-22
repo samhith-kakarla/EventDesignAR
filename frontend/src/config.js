@@ -1,21 +1,19 @@
-// SPOTIFY
+// FIREBASE
+import {
+  FIREBASE_API_KEY as _FIREBASE_API_KEY,
+  FIREBASE_AUTH_DOMAIN as _FIREBASE_AUTH_DOMAIN,
+  FIREBASE_PROJECT_ID as _FIREBASE_PROJECT_ID,
+  FIREBASE_STORAGE_BUCKET as _FIREBASE_STORAGE_BUCKET,
+  FIREBASE_MESSAGE_SENDER_ID as _FIREBASE_MESSAGE_SENDER_ID,
+  FIREBASE_APP_ID as _FIREBASE_APP_ID,
+} from '@env';
 
-export const CLIENT_ID = '15af30911e4c41dbb45c25106d7653f4';
-export const CLIENT_SECRET = 'acfde5d130074e71be9c4823aaf5c9d8';
-export const REDIRECT_URI = '';
-export const SCOPES = [
-  'user-modify-playback-state',
-  'user-read-currently-playing',
-  'user-read-playback-state',
-  'user-library-modify',
-  'user-library-read',
-  'playlist-read-private',
-  'playlist-read-collaborative',
-  'playlist-modify-public',
-  'playlist-modify-private',
-  'user-read-recently-played',
-  'user-top-read',
-];
+export const FIREBASE_API_KEY = _FIREBASE_API_KEY;
+export const FIREBASE_AUTH_DOMAIN = _FIREBASE_AUTH_DOMAIN;
+export const FIREBASE_PROJECT_ID = _FIREBASE_PROJECT_ID;
+export const FIREBASE_STORAGE_BUCKET = _FIREBASE_STORAGE_BUCKET;
+export const FIREBASE_MESSAGE_SENDER_ID = _FIREBASE_MESSAGE_SENDER_ID;
+export const FIREBASE_APP_ID = _FIREBASE_APP_ID;
 
 // REDUX
 
