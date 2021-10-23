@@ -1,4 +1,4 @@
-import { LandingScreen, OnboardingScreens } from './Landing';
+import { LandingScreen, OnboardingScreens, SignUpScreen } from './Landing';
 
 import { DashboardScreen, ProfileScreen, CameraScreen } from './Tabs';
 
@@ -6,6 +6,7 @@ export {
   // User Flow
   LandingScreen,
   OnboardingScreens,
+  SignUpScreen,
   // Dashboard
   DashboardScreen,
   // Profile

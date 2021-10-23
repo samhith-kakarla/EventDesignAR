@@ -20,7 +20,7 @@ const Stack = createStackNavigator();
 const Main = () => {
   const dispatch = useDispatch();
 
-  const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
+  const isAuthenticated = useSelector((state) => state.user.user !== null);
   // const userId = useSelector((state) => state.auth.userId);
   // const backendFetched = useSelector((state) => state.user.backendFetched);
 

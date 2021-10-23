@@ -3,7 +3,7 @@ import React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { LandingScreen, OnboardingScreens } from '../screens';
+import { LandingScreen, OnboardingScreens, SignUpScreen } from '../screens';
 import { recordScreen } from '../utils';
 
 const Stack = createStackNavigator();
@@ -27,6 +27,18 @@ const UserScreens = () => {
       <Stack.Screen
         name="Onboarding"
         component={OnboardingScreens}
+        listeners={({ route }) => ({
+          focus: (e) => {
+            recordScreen('Onboarding');
+          },
+        })}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="SignUp"
+        component={SignUpScreen}
         listeners={({ route }) => ({
           focus: (e) => {
             recordScreen('Onboarding');

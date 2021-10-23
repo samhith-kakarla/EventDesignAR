@@ -18,7 +18,7 @@ const OnboardingScreens = ({ navigation }) => {
             width: 200,
             height: 250,
           }}
-          source={require('../../assets/onboarding2.png')}
+          // source={require('../../assets/onboarding2.png')}
         />
       ),
       title: (
@@ -55,7 +55,7 @@ const OnboardingScreens = ({ navigation }) => {
       image: (
         <Image
           style={styles.image}
-          source={require('../../assets/onboarding1.png')}
+          // source={require('../../assets/onboarding1.png')}
         />
       ),
       title: (
@@ -97,7 +97,7 @@ const OnboardingScreens = ({ navigation }) => {
             height: 260,
             marginTop: 50,
           }}
-          source={require('../../assets/onboarding3.png')}
+          // source={require('../../assets/onboarding3.png')}
         />
       ),
       title: (

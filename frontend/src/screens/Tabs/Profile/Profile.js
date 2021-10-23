@@ -14,9 +14,6 @@ import * as Linking from 'expo-linking';
 // import { MaterialIcons } from '@expo/vector-icons';
 // import { Avatar } from 'react-native-elements';
 
-import { unsetAuthStatus as reduxUnsetAuthStatus } from '../../../redux/actions/authActions';
-import { unsetUser as reduxUnsetUser } from '../../../redux/actions/userActions';
-import { updateUser } from '../../../api/user';
 import styles from './styles';
 import * as colors from '../../../theme/colors';
 
@@ -81,10 +78,10 @@ const ProfileScreen = ({ navigation }) => {
             style={styles.spotifyButton}
             onPress={goToUserSpotify}
           >
-            <Image
+            {/* <Image
               style={styles.spotifyLogo}
               source={require('../../../assets/spotify.png')}
-            />
+            /> */}
             <Text style={styles.spotifyButtonText}>My Spotify Profile</Text>
           </TouchableOpacity>
           <Text style={styles.settingsText}>Settings</Text>

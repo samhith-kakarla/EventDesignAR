@@ -63,12 +63,8 @@ const HomeTabs = ({ navigation }) => {
                     iconName = 'home';
                     break;
                   }
-                  case 'Profile': {
-                    iconName = 'person';
-                    break;
-                  }
-                  case 'My Library': {
-                    iconName = 'library-music';
+                  case 'Camera': {
+                    iconName = 'camera';
                     break;
                   }
                   default: {
