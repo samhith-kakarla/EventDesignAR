@@ -7,7 +7,6 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import UserScreens from './User';
 import HomeTabs from './Tabs';
-import { getUserInfo, createNewUser } from '../api/user';
 import {
   backendFetched as reduxBackendFetched,
   backendError as reduxBackendError,

@@ -41,7 +41,7 @@ const UserScreens = () => {
         component={SignUpScreen}
         listeners={({ route }) => ({
           focus: (e) => {
-            recordScreen('Onboarding');
+            recordScreen('SignUp');
           },
         })}
         options={{
