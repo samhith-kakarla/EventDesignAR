@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
 import {
-  SafeAreaView,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  Keyboard,
   View,
   Text,
   TextInput,
   TouchableOpacity,
 } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 
 import {
   setUser as reduxSetUser,
@@ -45,44 +48,82 @@ const SignUpScreen = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.mainView}>
-        <TextInput
-          style={styles.inputBox}
-          value={name}
-          onChangeText={(text) => {
-            setError();
-            setName(text);
-          }}
-          placeholder="Full Name"
-        />
-        <TextInput
-          style={styles.inputBox}
-          value={email}
-          onChangeText={(text) => {
-            setError();
-            setEmail(text);
-          }}
-          placeholder="Email"
-          autoCapitalize="none"
-        />
-        <TextInput
-          style={styles.inputBox}
-          value={password}
-          onChangeText={setPassword}
-          placeholder="Password"
-          secureTextEntry={true}
-        />
-        <TouchableOpacity style={styles.button} onPress={handleSignUp}>
-          <Text style={styles.buttonText}>Sign Up</Text>
-        </TouchableOpacity>
-        <Text>Already have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Landing')}>
-          <Text>Login</Text>
-        </TouchableOpacity>
-        <Text style={styles.errorText}>{error !== '' ? error : ''}</Text>
-      </View>
-    </SafeAreaView>
+    <KeyboardAvoidingView style={styles.container}>
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <View style={styles.mainView}>
+          <View style={styles.buttonView}>
+            <Text style={styles.labelText}>NAME</Text>
+            <View style={styles.inputBox}>
+              <MaterialIcons
+                name="person-outline"
+                color="#7B8794"
+                size={20}
+                style={{ padding: 2 }}
+              />
+              <TextInput
+                style={styles.inputBoxText}
+                value={name}
+                onChangeText={(text) => {
+                  setError();
+                  setName(text);
+                }}
+                placeholder="Full Name"
+                placeholderTextColor="#7B8794"
+              />
+            </View>
+            <Text style={styles.labelText}>EMAIL</Text>
+            <View style={styles.inputBox}>
+              <MaterialIcons
+                name="mail-outline"
+                color="#7B8794"
+                size={20}
+                style={{ padding: 2 }}
+              />
+              <TextInput
+                style={styles.inputBoxText}
+                value={email}
+                onChangeText={(text) => {
+                  setError();
+                  setEmail(text);
+                }}
+                placeholder="name@email.com"
+                placeholderTextColor="#7B8794"
+                autoCapitalize="none"
+              />
+            </View>
+            <Text style={styles.labelText}>PASSWORD</Text>
+            <View style={styles.inputBox}>
+              <MaterialIcons
+                name="lock-outline"
+                color="#7B8794"
+                size={20}
+                style={{ padding: 2 }}
+              />
+              <TextInput
+                style={styles.inputBoxText}
+                value={password}
+                onChangeText={setPassword}
+                placeholder="********"
+                placeholderTextColor="#7B8794"
+                secureTextEntry={true}
+              />
+            </View>
+            <TouchableOpacity style={styles.mainButton} onPress={handleSignUp}>
+              <Text style={styles.buttonText}>Sign Up</Text>
+            </TouchableOpacity>
+            <View style={styles.navigationView}>
+              <Text style={styles.navigationLabelText}>
+                Already have an account?{' '}
+              </Text>
+              <TouchableOpacity onPress={() => navigation.navigate('Landing')}>
+                <Text style={styles.navigationText}>Login</Text>
+              </TouchableOpacity>
+            </View>
+            <Text style={styles.errorText}>{error !== '' ? error : ''}</Text>
+          </View>
+        </View>
+      </TouchableWithoutFeedback>
+    </KeyboardAvoidingView>
   );
 };
 

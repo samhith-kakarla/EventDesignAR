@@ -5,13 +5,13 @@ import * as colors from '../../theme/colors';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.black,
+    backgroundColor: '#1F1F1F',
   },
   mainView: {
     flex: 1,
-    paddingTop: 140,
+    paddingTop: 160,
     paddingBottom: 20,
-    paddingHorizontal: 30,
+    paddingHorizontal: 20,
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -62,12 +62,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: colors.blue,
   },
-  container: {
-    flex: 1,
-    backgroundColor: colors.white,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   headerText: {
     color: colors.red,
     fontWeight: 'bold',
@@ -84,13 +78,25 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   inputBox: {
-    width: '85%',
-    margin: 10,
-    padding: 15,
+    flexDirection: 'row',
     fontSize: 16,
-    borderColor: colors.gray0,
-    borderBottomWidth: 1,
-    textAlign: 'center',
+    padding: 12,
+    backgroundColor: '#333333',
+    color: '#7B8794',
+    borderRadius: 8,
+    borderColor: '#7B8794',
+    borderWidth: 0.5,
+    borderStyle: 'solid',
+    marginTop: 10,
+    marginBottom: 15,
+    fontWeight: '600',
+  },
+  inputBoxText: {
+    flex: 1,
+    marginLeft: 5,
+    color: '#7B8794',
+    fontWeight: '600',
+    fontSize: 16,
   },
   button: {
     marginTop: 30,
@@ -104,8 +110,8 @@ const styles = StyleSheet.create({
     width: 200,
   },
   buttonText: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontSize: 16,
+    fontWeight: '600',
     color: colors.white,
   },
   image: {
@@ -136,6 +142,35 @@ const styles = StyleSheet.create({
   },
   mainButton: {
     backgroundColor: colors.orange2,
+    padding: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 32,
+    marginHorizontal: 25,
+    marginTop: 10,
+  },
+  labelText: {
+    fontSize: 12,
+    color: colors.white,
+    fontWeight: 'bold',
+  },
+  navigationView: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 30,
+  },
+  navigationLabelText: {
+    color: '#7B8794',
+    fontWeight: 'bold',
+    fontSize: 14,
+  },
+  navigationText: {
+    marginLeft: 5,
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: colors.pink,
   },
 });
 

@@ -18,8 +18,4 @@ export const FIREBASE_APP_ID = _FIREBASE_APP_ID;
 // REDUX
 
 export const USE_LOGGER = false;
-export const CLEAR_REDUX = false;
-
-// BACKEND
-
-export const API_URL = 'https://music-manager-app.herokuapp.com/';
+export const CLEAR_REDUX = true;
