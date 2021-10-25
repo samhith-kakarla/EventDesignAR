@@ -18,6 +18,7 @@ import {
   unsetUser as reduxUnsetUser,
 } from '../../redux/actions/userActions';
 import { signup } from '../../firebase/auth';
+import { createNewUser } from '../../firebase/user';
 // import * as colors from '../../theme/colors';
 import styles from './styles';
 
@@ -36,8 +37,18 @@ const SignUpScreen = ({ navigation }) => {
       name,
       email,
       password,
-      async (userId, userEmail) => {
-        signupUser({ userId: userId, email: userEmail });
+      async (userId, userEmail, userName) => {
+        signupUser({ userId: userId, email: userEmail, name: userName });
+        const error = await createNewUser({
+          userId: userId,
+          email: userEmail,
+          name: userName,
+        });
+
+        setError(error);
+        if (error !== '') {
+          signupUserFailed();
+        }
       },
     );
 

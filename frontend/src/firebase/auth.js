@@ -14,12 +14,12 @@ export const signup = async (name, email, password, thenFunc) => {
     const userId = userCred.user.uid;
     const userEmail = userCred.user.email;
     const user = firebaseAuth.currentUser;
-    user
+    await user
       .updateProfile({ displayName: name })
       .then(() => console.log('Profile updated'))
       .catch((error) => console.log(error));
 
-    await thenFunc(userId, userEmail);
+    await thenFunc(userId, userEmail, user.displayName);
     return '';
   } catch (error) {
     switch (error.code) {

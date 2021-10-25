@@ -11,6 +11,7 @@ import {
   backendFetched as reduxBackendFetched,
   backendError as reduxBackendError,
 } from '../redux/actions/userActions';
+import { getUserInfo } from '../firebase/user';
 
 LogBox.ignoreAllLogs(true);
 
@@ -20,11 +21,25 @@ const Main = () => {
   const dispatch = useDispatch();
 
   const isAuthenticated = useSelector((state) => state.user.user !== null);
-  // const userId = useSelector((state) => state.auth.userId);
-  // const backendFetched = useSelector((state) => state.user.backendFetched);
+  const user = useSelector((state) => state.user.user);
+  const backendFetched = useSelector((state) => state.user.backendFetched);
 
-  // const setBackendFetched = () => dispatch(reduxBackendFetched());
-  // const setBackendError = () => dispatch(reduxBackendError());
+  const setBackendFetched = () => dispatch(reduxBackendFetched());
+  const setBackendError = () => dispatch(reduxBackendError());
+
+  useEffect(() => {
+    (async () => {
+      const error = await getUserInfo(user, async (userInfo) => {
+        console.log(userInfo);
+        // Set user info to redux
+        setBackendFetched();
+      });
+
+      if (error !== '') {
+        setBackendError();
+      }
+    })();
+  }, [isAuthenticated]);
 
   return (
     <NavigationContainer>
