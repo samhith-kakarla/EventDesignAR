@@ -22,7 +22,7 @@ const Main = () => {
 
   const isAuthenticated = useSelector((state) => state.user.user !== null);
   const user = useSelector((state) => state.user.user);
-  const backendFetched = useSelector((state) => state.user.backendFetched);
+  // const backendFetched = useSelector((state) => state.user.backendFetched);
 
   const setBackendFetched = () => dispatch(reduxBackendFetched());
   const setBackendError = () => dispatch(reduxBackendError());

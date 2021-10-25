@@ -1,4 +1,9 @@
-import { LandingScreen, OnboardingScreens, SignUpScreen } from './Landing';
+import {
+  LandingScreen,
+  OnboardingScreens,
+  SignUpScreen,
+  LoadingScreen,
+} from './Landing';
 
 import { DashboardScreen, ProfileScreen, CameraScreen } from './Tabs';
 
@@ -7,6 +12,7 @@ export {
   LandingScreen,
   OnboardingScreens,
   SignUpScreen,
+  LoadingScreen,
   // Dashboard
   DashboardScreen,
   // Profile
